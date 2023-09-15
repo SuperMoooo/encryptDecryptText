@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500&display=swap');
+
+* {
+    font-family: 'Source Code Pro', monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 20px;
+}
+
+:root {
+    --colorBG: #ffffff;
+    --colorText: #000000;
+    --colorBorder: #343434;
+    --colorBoxShadow: 0deg 0% 9%;
+    --colorBoxShadowSimple: #4a4a4a;
+}
+
+.decrypt {
+    --colorBG: #1e1e1e;
+    --colorText: #ffffff;
+    --colorBorder: #c7c7c7;
+    --colorBoxShadow: 0deg 0% 52%;
+    --colorBoxShadowSimple: #b3b3b3;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: var(--colorBG);
+    color: var(--colorText);
+    transition: 0.5s ease;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--colorBorder);
+    border-radius: 6px;
+    padding: 5px;
+    flex-direction: column;
+    box-shadow: 0px 1px 1.1px hsl(var(--colorBoxShadow) / 0.72),
+        0px 19.6px 22.1px -2.5px hsl(var(--colorBoxShadow) / 0.72);
+    height: 410px;
+}
+
+.switchContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.switch {
+    position: relative;
+    border: 1px solid var(--colorBorder);
+    padding: 7px;
+    border-radius: 15px;
+    width: 70px;
+    height: 29.5px;
+}
+
+.switchBall {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid var(--colorBorder);
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.5s ease;
+    top: 3px;
+    left: 4px;
+}
+
+.on {
+    left: 42px;
+}
+
+span {
+    margin: 10px;
+}
+
+.inputContainer,
+.outputContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+    flex-direction: column;
+    position: relative;
+}
+.infoText {
+    position: absolute;
+    font-size: 13px;
+    border: 1px solid var(--colorBorder);
+    border-bottom: none;
+    left: 330px;
+    top: -27px;
+    padding: 5px;
+}
+.infoText2 {
+    position: absolute;
+    font-size: 13px;
+    border: 1px solid var(--colorBorder);
+    border-top: none;
+    left: 330px;
+    top: 100px;
+    padding: 5px;
+}
+
+.inputText,
+.outputText {
+    height: 100px;
+    width: 400px;
+    background-color: var(--colorBG);
+    border: 1px solid var(--colorBorder);
+    transition: 0.5s ease;
+    color: var(--colorText);
+    font-size: 14px;
+    padding-left: 3px;
+    resize: none;
+}
+
+.btnContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnContainer > button {
+    width: 400px;
+    padding: 6px;
+    cursor: pointer;
+    transition: 0.5s ease;
+    background-color: var(--colorBG);
+    border: 1px solid var(--colorBorder);
+    color: var(--colorText);
+    box-shadow: 0px 6px 18px -3px var(--colorBoxShadowSimple);
+}
+
+.btnContainer > button:active {
+    box-shadow: none;
+}
+
+.btnContainer > button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.btnContainer > button:disabled:active {
+    box-shadow: 0px 6px 18px -3px var(--colorBoxShadowSimple);
+}
